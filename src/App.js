@@ -8,10 +8,20 @@ function App() {
   return (
     <>
       <Navbar/>
-      <Main/>
+      
       <Cards/>
       <Layout>
-        
+        <Main
+          saludo="Bienvenido a nuestra tienda!"
+          edad={1}
+          datos={{nombre: 'Happy Belly'}}
+        />
+        <h3>
+          Consulta por otros productos!
+        </h3>
+
+        <button>Click!</button>
+
       </Layout>
     </>
   );
