@@ -13,7 +13,12 @@ const Navbar = (props) => {
             <a href="/">Nosotros</a>
             <a href="/">Contacto</a>            
           </div>
-          <Button text="Ingresá"/>
+          <div style={{display:'flex,'}}>
+            <span className="material-symbols-outlined"> 
+              <Button text="shopping_cart_checkout"/>
+            </span>
+          </div>
+          
         </NavContainer>
       </>
     )
