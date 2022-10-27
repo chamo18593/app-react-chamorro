@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import Button from './Button'
 
 const Cards = () => {
     return(
@@ -16,7 +16,9 @@ const Cards = () => {
                 <h4 className='card-title'>Waffles</h4>
                 <p className='card-text text-secondary'>Waffles con dulce de leche</p>
             </div>
+            <Button text ="Comprar"/>
         </div>
+
     )
 }
 

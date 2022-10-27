@@ -1,7 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
+import Button from './Button';
 
-function Navbar() {
+const Navbar = (props) => {
 
     return (
       <>
@@ -12,6 +13,7 @@ function Navbar() {
             <a href="/">Nosotros</a>
             <a href="/">Contacto</a>            
           </div>
+          <Button text="Ingresá"/>
         </NavContainer>
       </>
     )
