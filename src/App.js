@@ -9,7 +9,9 @@ function App() {
     <>
       <Navbar/>
       
-      <Cards/>
+      <Cards
+      
+      />
       <Layout>
         <Main
           saludo="Bienvenido a nuestra tienda!"
