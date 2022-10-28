@@ -6,7 +6,7 @@ const Main = ({saludo, edad, datos}) => {
     return(
         <main>
             <p>Bienvenido</p>
-            <p>Somos Happy Belly</p>
+            <p>A nuestra tienda de cosas ricas ♥</p>
             <p>Comenzamos hace {edad} año!</p>
             <p>
                 {nombre}
