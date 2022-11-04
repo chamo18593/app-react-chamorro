@@ -4,12 +4,11 @@ import Navbar from './components/Navbar';
 import Main from './components/Main';
 import Layout from './components/Layout';
 import Contador from './components/Contador';
-
+import ItemListContainer from './components/ItemListContainer';
 const App = () => {
   return (
     <>
-      <Navbar/>
-      
+      <Navbar/> 
       <Cards/>
       <Layout>
         <Main
@@ -22,7 +21,7 @@ const App = () => {
         </h3>
 
         <Contador stock={10} />
-
+        <ItemListContainer/>
       </Layout>
     </>
     );
