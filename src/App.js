@@ -3,18 +3,17 @@ import Cards from './components/Cards';
 import Navbar from './components/Navbar';
 import Main from './components/Main';
 import Layout from './components/Layout';
+import Contador from './components/Contador';
 
-function App() {
+const App = () => {
   return (
     <>
       <Navbar/>
       
-      <Cards
-      
-      />
+      <Cards/>
       <Layout>
         <Main
-          saludo="Bienvenido a nuestra tienda!"
+          saludo="Bienvenido!"
           edad={1}
           datos={{nombre: 'Happy Belly'}}
         />
@@ -22,11 +21,12 @@ function App() {
           Consulta por otros productos!
         </h3>
 
-        <button>Click!</button>
+        <Contador stock={10} />
 
       </Layout>
     </>
-  );
-}
+    );
+  };
+  
 
 export default App;
