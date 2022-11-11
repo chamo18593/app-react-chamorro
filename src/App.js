@@ -19,9 +19,8 @@ const App = () => {
         <h3>
           Consulta por otros productos!
         </h3>
-
-        <Contador stock={10} />
         <ItemListContainer/>
+        <Contador stock={10} />
       </Layout>
     </>
     );

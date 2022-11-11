@@ -21,7 +21,7 @@ const Contador = ({stock}) => {
                 display:'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                minHeight: '80vh',
+                minHeight: '20vh',
             }}
         >
 
