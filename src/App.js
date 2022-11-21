@@ -5,11 +5,13 @@ import Main from './components/Main';
 import Layout from './components/Layout';
 import Contador from './components/Contador';
 import ItemListContainer from './components/ItemListContainer';
+import CartWidget from './components/CartWidget';
+
 const App = () => {
   return (
     <>
       <Navbar/> 
-      <Cards/>
+      <ItemListContainer/>
       <Layout>
         <Main
           saludo="Bienvenido!"
@@ -19,7 +21,6 @@ const App = () => {
         <h3>
           Consulta por otros productos!
         </h3>
-        <ItemListContainer/>
         <Contador stock={10} />
       </Layout>
     </>

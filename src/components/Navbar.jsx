@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from './Button';
+import CartWidget from './CartWidget';
 
-const Navbar = (props) => {
+const Navbar = ({ inInHeader }) => {
 
     return (
       <>
@@ -10,35 +10,37 @@ const Navbar = (props) => {
           <h2>Tienda <span>Happy Belly</span></h2>
           <div>
             <a href="/">Inicio</a>
+            <a href="/">Productos</a>
             <a href="/">Nosotros</a>
-            <a href="/">Contacto</a>            
-          </div>
-          <div style={{display:'flex', alignItems:'center'}}>
-            <span className="material-symbols-outlined"> 
-              <Button text="shopping_cart_checkout"/>
-            </span>
-          </div>
-          
+          </div>         
+          <CartWidget/>  
         </NavContainer>
+        
       </>
-    )
+    );
   };
   
   export default Navbar
 
 const NavContainer = styled.nav`
-    h2{
-        color: white;
-        font-weight: 400;        
+  h2{
+      color: white;
+      font-weight: 400;
+      span{
+        font-weight: bold;
+        }
     }
-    padding: .4rem;
-    background-color: violet;
+    padding: 15px;
+    background-color: pink;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    a{
-        color: white;
-        text-decoration: none;
-        margin-right: 1rem;  
-    }
+
+  a{
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+    font-size: 20px;    
+  }
   `
