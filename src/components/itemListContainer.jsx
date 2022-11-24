@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { products } from '../mock/products';
+import ItemList from './ItemList';
 
-const ItemListContainer = () => {
+const ItemListContainer = ({saludo}) => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
@@ -26,19 +27,7 @@ const ItemListContainer = () => {
     return (
 
     <div id="container">
-        {
-            items.map ((producto) => {
-                 return (
-                    <div>
-                        <img src={producto.img} width='200px' alt={producto.title}/>
-                        <article>
-                            <h2>{producto.title}</h2>
-                            <h3>${producto.price}.-</h3>
-                        </article>
-                    </div>
-            )
-            })
-            }
+        <ItemList items={items} />
     </div>
  );
 };

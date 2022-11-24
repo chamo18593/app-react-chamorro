@@ -1,35 +1,49 @@
 import {useState} from 'react'
 
-const Contador = ({stock}) => {
-  
-    const [cantidad, setCantidad] = useState(0);
+import React from 'react'
+
+const Contador = ({stock, onAdd}) => {
+    const [cantidad, setCantidad] = useState(1);
 
     const sumar = () => {
         if (cantidad < stock) {
-            setCantidad(cantidad + 1);
+            setCantidad (cantidad + 1);
         }
-        
+    };
+
+    const restar = () => {
+        if (cantidad > 1) {
+            setCantidad (cantidad - 1);
+        }
     };
 
     const reset = () => {
-        setCantidad(0);
+        setCantidad (1);
     };
-  
+
     return (
         <div
             style={{
-                display:'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                minHeight: '20vh',
+                
+                height: '40px',
+                width:'182px',
+
             }}
         >
+            <p className='pinkStyle'>{cantidad}</p>
+            <button className='pinkStyle' disable={cantidad === stock} onClick={sumar}>
+                +
+            </button>
+            
+            <button  className='pinkStyle' disable={cantidad === 1} onClick={restar}>
+                -
+            </button>
+            <button className='pinkStyle' onClick={reset}>Borrar</button>
+            <button className='pinkStyle' onClick={onAdd}>Agregar</button>
 
-            <p>{cantidad}</p>
-            <button onClick={sumar}>+</button>
-            <button onClick={reset}>Quitar del carrito</button>
         </div>
     )
+  
 }
 
 export default Contador;
